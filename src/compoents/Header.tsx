@@ -54,19 +54,14 @@ const Header: FC<HeaderProps> = ({fixed, transparent}) => {
         <header className={headerClass}>
             <div className={'container'}>
                 <div className={'header__brand'}>
-                    <h1>
-                        <Link to={'/'}>
-                            React
-                        </Link>
-                    </h1>
                     <div className={'header__nav'}>
                         <div className={'header__nav_lang'}>
                             <p className={'selected'} onClick={() => setShowDropdown(true)}>{language}</p>
                             {showDropdown &&
                             <ul className={'dropdown'} ref={dropdownEl}>
                                 <li onClick={() => chooseLanguageHandler('en')}>English</li>
-                                <li onClick={() => chooseLanguageHandler('de')}>German</li>
-                                <li onClick={() => chooseLanguageHandler('ge')}>Georgia</li>
+                                <li onClick={() => chooseLanguageHandler('de')}>Deutsche</li>
+                                <li onClick={() => chooseLanguageHandler('ge')}>ქართული</li>
                             </ul>
                             }
                         </div>

@@ -5,6 +5,7 @@ import Header from "../compoents/Header";
 import {translate} from '../i18n';
 import {RootState} from '../store';
 
+import aboutImg from '../assets/images/pexels-aleksandar-pasaric-1119723.jpg';
 
 const About: FC = () => {
     const {language} = useSelector((state: RootState) => state.lang);
@@ -15,6 +16,7 @@ const About: FC = () => {
             <section className={'about'}>
                 <div className={'container'}>
                     <h1>{translate('about', language)}</h1>
+                    <img src={aboutImg} alt={''} />
                     <p>{translate('aboutUsText', language)}</p>
                 </div>
             </section>
